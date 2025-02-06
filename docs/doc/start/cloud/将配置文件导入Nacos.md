@@ -253,11 +253,12 @@ datasource模式和column、none 模式，该配置文件有区别。 因为data
    lamp:
      cache:
        type: REDIS   # 本地不想启动redis，可以修改为  CAFFEINE
-     redis:
-        ip: 127.0.0.1
-        port: 16379
-        password: 'SbtyMveYNfLzTks7H0apCmyStPzWJqjy'    # redis 的密码，没有配置密码的改成单引号的空字符串: ''（这个密码是明文，没有加密）
-        database: 0
+     data: 
+       redis:
+          ip: 127.0.0.1
+          port: 16379
+          password: 'SbtyMveYNfLzTks7H0apCmyStPzWJqjy'    # redis 的密码，没有配置密码的改成单引号的空字符串: ''（这个密码是明文，没有加密）
+          database: 0
    ```
 
 7. 在 nacos 中，修改 rabbitmq.yml 的IP、端口、账号密码。
